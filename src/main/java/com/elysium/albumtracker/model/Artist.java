@@ -3,6 +3,8 @@ package com.elysium.albumtracker.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "artist")
 public class Artist {
@@ -12,6 +14,17 @@ public class Artist {
 
     @Size(min = 1, max = 300, message = "Artist name must not be empty and at most 300 characters")
     private String name;
+
+    @OneToMany(mappedBy = "artist")
+    private Set<Album> albums;
+
+    public Set<Album> getAlbums() {
+        return albums;
+    }
+
+    public void addAlbum(Album a) {
+        albums.add(a);
+    }
 
     public Integer getId() {
         return id;

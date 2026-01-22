@@ -30,13 +30,8 @@ public class ArtistController {
         return a.getId();
     }
 
-    @GetMapping(path = "/")
-    public @ResponseBody Iterable<Artist> getArtists() {
-        return artistRepository.findAll();
-    }
-
     @PutMapping(path = "/{id}")
-    public ResponseEntity<String> updateArtist(
+    public ResponseEntity<String> updateArtistData(
             @PathVariable Integer id,
             @Valid @RequestParam String artistName
             ) {

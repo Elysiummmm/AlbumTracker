@@ -5,18 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10306a25-68e0-40b5-a8ba-aad3b111822f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/AlbumTrackerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/ArtistController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Album.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Artist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Track.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/repository/ArtistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/AlbumController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/repository/AlbumRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/repository/ReviewRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/repository/TrackRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/ArtistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Artist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Track.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,19 +38,23 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="389Wqma8O72VxKTe56xMxezXbtd" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.AlbumTrackerApplication.executor": "Run",
     "Application.Main.executor": "Run",
     "Maven.AlbumTracker.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
@@ -65,5 +69,8 @@
       <updated>1768212460741</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

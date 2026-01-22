@@ -2,6 +2,8 @@ package com.elysium.albumtracker.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "track")
@@ -15,8 +17,13 @@ public class Track {
     @JsonBackReference
     private Album album;
 
+    @Size(min = 1, message = "Name mustn't be empty")
     private String name;
     private float length;
+
+    public Integer getId() {
+        return id;
+    }
 
     public float getLength() {
         return length;

@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10306a25-68e0-40b5-a8ba-aad3b111822f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/TrackController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/AlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/AlbumController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/ArtistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Track.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +51,11 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.elysium.albumtracker.controller" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

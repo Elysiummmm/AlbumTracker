@@ -67,26 +67,6 @@ public class ArtistController {
         return new ResponseEntity<>(OK);
     }
 
-    @PostMapping(path = "/{id}/albums")
-    public ResponseEntity<String> addAlbum(
-            @PathVariable Integer id,
-            @RequestParam Integer albumId
-    ) {
-        Optional<Artist> artist = artistRepository.findById(id);
-        Optional<Album> album = albumRepository.findById(albumId);
-
-        if (artist.isEmpty()) {
-            return new ResponseEntity<>("Artist doesn't exist", NOT_FOUND);
-        }
-
-        if (album.isEmpty()) {
-            return new ResponseEntity<>("Album doesn't exist", NOT_FOUND);
-        }
-
-        artist.get().addAlbum(album.get());
-        return new ResponseEntity<>(OK);
-    }
-
     @GetMapping(path = "/{id}/albums")
     public @ResponseBody Set<Album> getAlbums(@PathVariable Integer id) {
         Optional<Artist> artist = artistRepository.findById(id);

@@ -1,7 +1,11 @@
 package com.elysium.albumtracker.controller;
 
 import com.elysium.albumtracker.model.Album;
+import com.elysium.albumtracker.model.Artist;
 import com.elysium.albumtracker.repository.AlbumRepository;
+import com.elysium.albumtracker.repository.ArtistRepository;
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,38 +21,45 @@ public class AlbumController {
     @Autowired
     private AlbumRepository albumRepository;
 
-    private void updateAlbum(Album a, String albumName, String jacketURL) {
+    @Autowired
+    private ArtistRepository artistRepository;
+
+    private void updateAlbum(Album a, String albumName, String jacketURL, Integer artistId) {
+        Optional<Artist> artist = artistRepository.findById(artistId);
+        if (artist.isEmpty()) {
+            throw new ResponseStatusException(NOT_FOUND);
+        }
+
         a.setName(albumName);
         a.setJacketURL(jacketURL);
+        a.setArtist(artist.get());
         albumRepository.save(a);
     }
 
     @PostMapping(path = "/")
-    public @ResponseBody Integer addAlbum(
+    public @ResponseBody Integer createAlbum(
             @Valid @RequestParam String albumName,
-            @Valid @RequestParam String jacketURL) {
+            @Valid @RequestParam String jacketURL,
+            @RequestParam Integer artistId) {
         Album a = new Album();
-        updateAlbum(a, albumName, jacketURL);
+        updateAlbum(a, albumName, jacketURL, artistId);
 
         return a.getId();
     }
 
     @PutMapping(path = "/{id}")
-    public ResponseEntity<String> updateAlbumData(
+    public @ResponseBody Integer updateAlbumData(
             @PathVariable Integer id,
             @Valid @RequestParam String albumName,
-            @Valid @RequestParam String jacketURL
+            @Valid @RequestParam String jacketURL,
+            @RequestParam Integer artistId
     ) {
         Optional<Album> result = albumRepository.findById(id);
 
-        if (result.isEmpty()) {
-            throw new ResponseStatusException(NOT_FOUND, "Album doesn't exist");
-        }
+        Album a = result.orElseGet(Album::new);
+        updateAlbum(a, albumName, jacketURL, artistId);
 
-        Album a = result.get();
-        updateAlbum(a, albumName, jacketURL);
-
-        return new ResponseEntity<>(HttpStatus.OK);
+        return a.getId();
     }
 
     @GetMapping(path = "/{id}")

@@ -1,19 +1,29 @@
 package com.elysium.albumtracker.controller;
 
+import java.util.Optional;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static org.springframework.http.HttpStatus.OK;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
+
 import com.elysium.albumtracker.model.Album;
 import com.elysium.albumtracker.model.Artist;
 import com.elysium.albumtracker.repository.AlbumRepository;
 import com.elysium.albumtracker.repository.ArtistRepository;
-import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
-import java.util.Optional;
-import java.util.Set;
 
-import static org.springframework.http.HttpStatus.NOT_FOUND;
-import static org.springframework.http.HttpStatus.OK;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping(path = "/artists")
@@ -29,7 +39,7 @@ public class ArtistController {
         artistRepository.save(a);
     }
 
-    @PostMapping(path = "/")
+    @PostMapping
     public @ResponseBody Integer createArtist(@Valid @RequestParam String artistName) {
         Artist a = new Artist();
         updateArtist(a, artistName);

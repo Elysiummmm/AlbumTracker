@@ -19,8 +19,6 @@ public class Review {
     private User author;
 
     @ManyToOne
-    @JoinColumn(name = "album_id", nullable = false)
-    @JsonBackReference
     private Album album;
 
     @Min(0)

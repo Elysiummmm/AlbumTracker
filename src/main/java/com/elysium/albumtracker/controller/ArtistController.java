@@ -30,7 +30,7 @@ public class ArtistController {
     }
 
     @PostMapping(path = "/")
-    public @ResponseBody Integer addArtist(@Valid @RequestParam String artistName) {
+    public @ResponseBody Integer createArtist(@Valid @RequestParam String artistName) {
         Artist a = new Artist();
         updateArtist(a, artistName);
 
@@ -38,7 +38,7 @@ public class ArtistController {
     }
 
     @PutMapping(path = "/{id}")
-    public ResponseEntity<String> updateArtistData(
+    public @ResponseBody Integer updateArtistData(
             @PathVariable Integer id,
             @Valid @RequestParam String artistName
     ) {
@@ -47,7 +47,7 @@ public class ArtistController {
         Artist a = result.orElseGet(Artist::new);
         updateArtist(a, artistName);
 
-        return new ResponseEntity<>(OK);
+        return a.getId();
     }
 
     @GetMapping(path = "/{id}")

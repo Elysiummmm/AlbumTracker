@@ -20,6 +20,19 @@ public class User {
 
     @Size(min = 1, max = 100, message = "Username must not be empty and shorter than 100 characters")
     private String username;
+    private String pfpUrl;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getPfpUrl() {
+        return pfpUrl;
+    }
+
+    public void setPfpUrl(String pfpUrl) {
+        this.pfpUrl = pfpUrl;
+    }
 
     public String getUsername() {
         return username;

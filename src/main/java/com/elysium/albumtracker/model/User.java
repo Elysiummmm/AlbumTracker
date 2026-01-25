@@ -5,6 +5,9 @@ import jakarta.validation.constraints.Size;
 
 import java.util.Set;
 
+/**
+ * Represents a user that listens to music.
+ */
 @Entity
 @Table(name = "user")
 public class User {
@@ -12,14 +15,27 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    /**
+     * All reviews written by this user.
+     */
     @OneToMany(mappedBy = "author")
     private Set<Review> reviews;
 
+    /**
+     * All albums this user has listened to.
+     */
     @OneToMany
     private Set<Album> listenedAlbums;
 
+    /**
+     * This users' name.
+     */
     @Size(min = 1, max = 100, message = "Username must not be empty and shorter than 100 characters")
     private String username;
+
+    /**
+     * The URL of this users' profile picture.
+     */
     private String pfpUrl;
 
     public Integer getId() {

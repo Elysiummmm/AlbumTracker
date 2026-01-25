@@ -5,6 +5,10 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Size;
 
+/**
+ * Represents a music track.
+ */
+
 @Entity
 @Table(name = "track")
 public class Track {
@@ -12,13 +16,23 @@ public class Track {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    /**
+     * The album this belongs to.
+     */
     @ManyToOne
     @JoinColumn(name = "album_id", nullable = false)
     @JsonBackReference
     private Album album;
 
+    /**
+     * The name of the track.
+     */
     @Size(min = 1, message = "Name mustn't be empty")
     private String name;
+
+    /**
+     * The length of the track in seconds.
+     */
     private float length;
 
     public Integer getId() {

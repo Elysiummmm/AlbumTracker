@@ -5,6 +5,9 @@ import jakarta.validation.constraints.Size;
 
 import java.util.Set;
 
+/**
+ * Represents a music artist.
+ */
 @Entity
 @Table(name = "artist")
 public class Artist {
@@ -12,9 +15,15 @@ public class Artist {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    /**
+     * The name of this artist.
+     */
     @Size(min = 1, max = 300, message = "Artist name must not be empty and at most 300 characters")
     private String name;
 
+    /**
+     * All albums by this artist.
+     */
     @OneToMany(mappedBy = "artist")
     private Set<Album> albums;
 

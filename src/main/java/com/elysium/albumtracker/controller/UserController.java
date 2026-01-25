@@ -48,10 +48,10 @@ public class UserController {
     @PostMapping
     public @ResponseBody Integer createUser(
             @Valid @RequestParam String username,
-            @Valid @RequestParam String pfpUrl
+            @Valid @RequestParam String pfpURL
     ) {
         User u = new User();
-        updateUser(u, username, pfpUrl);
+        updateUser(u, username, pfpURL);
 
         return u.getId();
     }
@@ -60,12 +60,12 @@ public class UserController {
     public @ResponseBody Integer updateUserData(
             @PathVariable Integer id,
             @Valid @RequestParam String username,
-            @Valid @RequestParam String pfpUrl
+            @Valid @RequestParam String pfpURL
     ) {
         Optional<User> result = userRepository.findById(id);
 
         User u = result.orElseGet(User::new);
-        updateUser(u, username, pfpUrl);
+        updateUser(u, username, pfpURL);
 
         return u.getId();
     }

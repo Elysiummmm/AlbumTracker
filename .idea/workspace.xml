@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10306a25-68e0-40b5-a8ba-aad3b111822f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/endpoints.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/endpoints.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/TrackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Artist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Track.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -49,7 +49,7 @@ public class TrackController {
     public @ResponseBody Integer createTrack(
             @Valid @RequestParam String trackName,
             @RequestParam Float length,
-            Integer albumId) {
+            @RequestParam Integer albumId) {
         Track t = new Track();
         updateTrack(t, trackName, length, albumId);
 

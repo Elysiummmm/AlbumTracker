@@ -1,0 +1,33 @@
+.jacketArt {
+    width: auto;
+    height: 512px;
+}
+
+.albumWrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+}
+
+.albumData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trackList {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+.trackList tr td {
+    padding: 15px 15px;
+}
+
+.trackList tr {
+    background: #ffffff65;
+}
+
+.trackList tr:nth-child(even) {
+    background: transparent;
+}

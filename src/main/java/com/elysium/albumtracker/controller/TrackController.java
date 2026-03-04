@@ -45,6 +45,11 @@ public class TrackController {
         trackRepository.save(t);
     }
 
+    @GetMapping
+    public @ResponseBody Iterable<Track> getTracks() {
+        return trackRepository.findAll();
+    }
+
     @PostMapping
     public @ResponseBody Integer createTrack(
             @Valid @RequestParam String trackName,

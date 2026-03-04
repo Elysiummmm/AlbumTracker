@@ -1,5 +1,6 @@
 package com.elysium.albumtracker.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -80,6 +81,11 @@ public class AlbumController {
         } else {
             return result.get();
         }
+    }
+
+    @GetMapping
+    public @ResponseBody Iterable<Album> getAlbums() {
+        return albumRepository.findAll();
     }
 
     @DeleteMapping(path = "/{id}")

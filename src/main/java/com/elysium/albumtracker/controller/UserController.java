@@ -45,6 +45,11 @@ public class UserController {
         userRepository.save(u);
     }
 
+    @GetMapping
+    public @ResponseBody Iterable<User> getUsers() {
+        return userRepository.findAll();
+    }
+
     @PostMapping
     public @ResponseBody Integer createUser(
             @Valid @RequestParam String username,

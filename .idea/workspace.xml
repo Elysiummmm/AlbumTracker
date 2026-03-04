@@ -5,16 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10306a25-68e0-40b5-a8ba-aad3b111822f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/eslint.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/public/vite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/src/assets/react.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/src/components/TopBar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/src/components/TopBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/src/main.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/src/views/Album.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/src/views/Album.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/album-tracker/vite.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/endpoints.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/endpoints.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docs.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docs.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/AlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/AlbumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/ArtistController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/TrackController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Album.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Artist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/Track.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +63,8 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Application.AlbumTrackerApplication.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AlbumTracker [install].executor&quot;: &quot;Run&quot;,
     &quot;Maven.AlbumTracker.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -61,6 +78,15 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.elysium.albumtracker.controller" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.elysium.albumtracker.AlbumTrackerApplication" />
+      <module name="AlbumTracker" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

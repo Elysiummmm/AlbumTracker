@@ -39,6 +39,11 @@ public class ArtistController {
         artistRepository.save(a);
     }
 
+    @GetMapping
+    public @ResponseBody Iterable<Artist> getArtist() {
+        return artistRepository.findAll();
+    }
+
     @PostMapping
     public @ResponseBody Integer createArtist(@Valid @RequestParam String artistName) {
         Artist a = new Artist();

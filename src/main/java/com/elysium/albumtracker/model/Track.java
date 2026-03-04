@@ -35,6 +35,11 @@ public class Track {
      */
     private float length;
 
+    /**
+     * Where on the album this track places (zero-indexed).
+     */
+    private Integer albumOrder;
+
     public Integer getId() {
         return id;
     }
@@ -61,5 +66,13 @@ public class Track {
 
     public void setAlbum(Album album) {
         this.album = album;
+    }
+
+    public Integer getAlbumOrder() {
+        return albumOrder;
+    }
+
+    public void setAlbumOrder(Integer albumOrder) {
+        this.albumOrder = albumOrder;
     }
 }

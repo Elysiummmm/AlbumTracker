@@ -68,6 +68,7 @@ Request parameters:
 - trackName: String
 - length: Float
 - albumId: Integer
+- albumOrder: Integer
 
 Returns: track ID
 
@@ -76,6 +77,7 @@ Request parameters:
 - trackName: String
 - length: Float
 - albumId: Integer
+- albumOrder: Integer
 
 Returns: track ID
 

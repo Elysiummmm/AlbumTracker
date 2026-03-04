@@ -24,6 +24,8 @@ function Album({ albumId }) {
         albumDataReq.onload = () => {
             let data = JSON.parse(albumDataReq.responseText);
 
+            data.tracks.sort((a, b) => a.albumOrder - b.albumOrder);
+
             setAlbumName(data.name);
             setJacketURL(data.jacketURL);
             setTrackList(data.tracks);

@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
+import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -45,10 +47,6 @@ public class Album {
 
     public Set<Track> getTracks() {
         return tracks;
-    }
-
-    public void addTrack(Track t) {
-        tracks.add(t);
     }
 
     public Integer getId() {

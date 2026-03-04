@@ -33,7 +33,7 @@ public class TrackController {
     @Autowired
     private AlbumRepository albumRepository;
 
-    private void updateTrack(Track t, String trackName, Float length, Integer albumId) {
+    private void updateTrack(Track t, String trackName, Float length, Integer albumId, Integer albumOrder) {
         Optional<Album> album = albumRepository.findById(albumId);
         if (album.isEmpty()) {
             throw new ResponseStatusException(NOT_FOUND);
@@ -41,6 +41,7 @@ public class TrackController {
 
         t.setName(trackName);
         t.setLength(length);
+        t.setAlbumOrder(albumOrder);
         t.setAlbum(album.get());
         trackRepository.save(t);
     }
@@ -54,9 +55,10 @@ public class TrackController {
     public @ResponseBody Integer createTrack(
             @Valid @RequestParam String trackName,
             @RequestParam Float length,
-            @RequestParam Integer albumId) {
+            @RequestParam Integer albumId,
+            @RequestParam Integer albumOrder) {
         Track t = new Track();
-        updateTrack(t, trackName, length, albumId);
+        updateTrack(t, trackName, length, albumId, albumOrder);
 
         return t.getId();
     }
@@ -66,12 +68,13 @@ public class TrackController {
             @PathVariable Integer id,
             @Valid @RequestParam String trackName,
             @RequestParam Float length,
-            @RequestParam Integer albumId
+            @RequestParam Integer albumId,
+            @RequestParam Integer albumOrder
     ) {
         Optional<Track> result = trackRepository.findById(id);
 
         Track t = result.orElseGet(Track::new);
-        updateTrack(t, trackName, length, albumId);
+        updateTrack(t, trackName, length, albumId, albumOrder);
 
         return t.getId();
     }

@@ -16,6 +16,8 @@ MySQL muss auf dem gleichen System laufen (ggf. in `src/main/java/application.pr
 Datenbank und Benutzer können automatisch mithilfe `setup.sql` eingerichtet werden.
 
 ### Backend starten
+Diese Befehle vom Root-Ordner aus ausführen:
+
 Zuerst Dependencies installieren mit `mvn install`.
 
 Danach einen Build erstellen mit `mvn clean compile package`.
@@ -23,6 +25,8 @@ Danach einen Build erstellen mit `mvn clean compile package`.
 Am Schluss kann das exportierte JAR-File mit `java -jar (Pfad zum JAR-File)` gestartet werden.
 
 ### Frontend starten
+Diese Befehle vom `frontend/album-tracker` Ordner aus ausführen:
+
 Ebenfalls zuerst alle Dependencies installieren mit `npm install`.
 
 Danach einfach starten mit `npm run dev`.

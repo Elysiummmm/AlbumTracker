@@ -28,6 +28,18 @@ function User() {
         userReq.send();
     }
 
+    function deleteUser() {
+        let userReq = new XMLHttpRequest();
+        userReq.open("DELETE", `http://localhost:8080/users/${params.userid}`);
+
+        userReq.onload = () => {
+            loginContext.setUser(undefined);
+            navigate("/");
+        };
+
+        userReq.send();
+    }
+
     useEffect(() => { reloadUserData() }, []);
 
     function maybeRenderEditButton() {
@@ -36,6 +48,12 @@ function User() {
                 command="show-modal" commandfor="user-data-edit">
                 Edit...
             </button>)
+        } else { return (<></>) }
+    }
+
+    function maybeRenderDeleteButton() {
+        if (loginContext.user && user && loginContext.user.id == user.id) {
+            return (<button className="createButton editButton" onClick={ deleteUser }>Delete...</button>)
         } else { return (<></>) }
     }
 
@@ -84,6 +102,7 @@ function User() {
                     <div className="detailsRight">
                         <span className="username">{ username }</span>
                         { maybeRenderEditButton() }
+                        { maybeRenderDeleteButton() }
                     </div>
                 </div>
                 <div className="albumsContainer">

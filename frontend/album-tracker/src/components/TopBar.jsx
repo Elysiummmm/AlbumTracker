@@ -15,7 +15,7 @@ function TopBar() {
     }
 
     return (
-        <header>
+        <nav>
             <Link className="topBarLink" to="/">Home</Link>
             <Link className="topBarLink" to="/albums">Albums</Link>
             <Link className="topBarLink" to="/artists">Artists</Link>
@@ -28,7 +28,7 @@ function TopBar() {
                     </Link>
                 : <Link className="topBarLink" to="/login">Log in</Link> 
             }
-        </header>
+        </nav>
     )
 }
 

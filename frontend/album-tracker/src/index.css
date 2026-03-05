@@ -12,10 +12,6 @@
 .textLeft { text-align: left; }
 .textRight { text-align: right; }
 
-body {
-    margin: 0;
-}
-
 .createButton {
     border: none;
     background: #b9b9b9;
@@ -28,4 +24,38 @@ body {
 
 .createButton:hover {
     background: #aaa;
+}
+
+body {
+    margin: 0;
+}
+
+dialog {
+    border: none;
+    border-radius: 6px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+input {
+    border-radius: 6px;
+    border: 1px solid grey;
+
+    padding: 4px 4px;
+
+    font-size: 22px;
+}
+
+button {
+    font-size: 22px;
+
+    border: 1px solid grey;
+    border-radius: 6px;
+
+    padding: 4px 4px;
 }

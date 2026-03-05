@@ -1,12 +1,36 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './AllArtists.css';
 import { Link } from 'react-router-dom';
 
 function AllArtists() {
     const [ artistList, setArtistList ] = useState([]);
+    const artistId = useRef(0);
 
     function handleAlbumCreation(event) {
+        const form = event.target;
+        const formData = new FormData(form);
+        const formJson = Object.fromEntries(formData.entries());
 
+        let albumReq = new XMLHttpRequest();
+        albumReq.open("POST", `http://127.0.0.1:8080/albums?albumName=${formJson.albumName}&jacketURL=${formJson.jacketUrl}&artistId=${artistId.current}`);
+
+        albumReq.onload = () => {
+            reloadArtists();
+        };
+
+        albumReq.send();
+    }
+
+    function reloadArtists() {
+        let artistDataReq = new XMLHttpRequest();
+        artistDataReq.open("GET", `http://127.0.0.1:8080/artists`);
+        
+        artistDataReq.onload = () => {
+            let data = JSON.parse(artistDataReq.responseText);
+            setArtistList(data);
+        };
+        
+        artistDataReq.send();
     }
 
     const artistListElements = artistList.map(artist => {
@@ -16,9 +40,12 @@ function AllArtists() {
             </Link>
         );
 
+        const setArtistId = () => { artistId.current = artist.id };
+
         albums.push(
             <button className="inlineJacket createButton" style={{ width: "215px" }}
-                command="show-modal" commandfor="create-album-dialog">Add new...</button>
+                command="show-modal" commandfor="create-album-dialog"
+                onClick={ setArtistId }>Add new...</button>
         );
 
         return (
@@ -29,17 +56,7 @@ function AllArtists() {
         )
     });
 
-    useEffect(() => {
-        let artistDataReq = new XMLHttpRequest();
-        artistDataReq.open("GET", `http://127.0.0.1:8080/artists`);
-        
-        artistDataReq.onload = () => {
-            let data = JSON.parse(artistDataReq.responseText);
-            setArtistList(data);
-        };
-        
-        artistDataReq.send();
-    }, []);
+    useEffect(() => { reloadArtists() }, []);
 
     return (
         <>

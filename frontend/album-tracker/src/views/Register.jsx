@@ -33,11 +33,13 @@ function Register() {
 
     return (
         <>
-            <form method="post" onSubmit={ createUser }>
-                <input required name="name" type="text" placeholder="Your username"></input>
-                <input required name="pfpUrl" type="url" placeholder="URL to your profile picture"></input>
-                <button type="submit">Register</button>
-            </form>
+            <div className="loginContainer">
+                <form method="post" onSubmit={ createUser }>
+                    <input required name="name" type="text" placeholder="Your username"></input>
+                    <input required name="pfpUrl" type="url" placeholder="URL to your profile picture"></input>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
         </>
     )
 }

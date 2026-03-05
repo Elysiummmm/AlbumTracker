@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { LoginContext } from "../LoginContext";
+import './Login.css';
 
 function Login() {
     const loginContext = useContext(LoginContext);
@@ -26,14 +27,14 @@ function Login() {
 
     return (
         <>
-            <form method="post" onSubmit={ handleLogin }>
-                <input required name="userId" type="number" placeholder="Your user ID"></input>
-                <button type="submit">Log in</button>
-            </form>
+            <div className="loginContainer">
+                <form method="post" onSubmit={ handleLogin }>
+                    <input required name="userId" type="number" placeholder="Your user ID"></input>
+                    <button type="submit">Log in</button>
+                </form>
 
-            <Link to="/register">
-                Register
-            </Link>
+                No account? <Link to="/register">Register</Link>
+            </div>
         </>
     )
 }

@@ -21,6 +21,22 @@ function AllArtists() {
         albumReq.send();
     }
 
+    {/* i'm literally john duplicated code */}
+    function handleArtistCreation(event) {
+        const form = event.target;
+        const formData = new FormData(form);
+        const formJson = Object.fromEntries(formData.entries());
+
+        let artistReq = new XMLHttpRequest();
+        artistReq.open("POST", `http://127.0.0.1:8080/artists?artistName=${formJson.artistName}`);
+
+        artistReq.onload = () => {
+            reloadArtists();
+        };
+
+        artistReq.send();
+    }
+
     function reloadArtists() {
         let artistDataReq = new XMLHttpRequest();
         artistDataReq.open("GET", `http://127.0.0.1:8080/artists`);
@@ -56,6 +72,13 @@ function AllArtists() {
         )
     });
 
+    artistListElements.push(
+        <tr><td colSpan="2">
+            <button className="createButton" style={{ width: "100%" }}
+            command="show-modal" commandfor="create-artist-dialog">Add new...</button>
+        </td></tr>
+    );
+
     useEffect(() => { reloadArtists() }, []);
 
     return (
@@ -64,6 +87,13 @@ function AllArtists() {
                 <form method="dialog" onSubmit={ handleAlbumCreation }>
                     <input required name="albumName" type="text" placeholder="Album name"></input>
                     <input required name="jacketUrl" type="url" placeholder="Jacket URL"></input>
+                    <button type="submit">Add</button>
+                </form>
+            </dialog>
+
+            <dialog id="create-artist-dialog" closedby="any">
+                <form method="dialog" onSubmit={ handleArtistCreation }>
+                    <input required name="artistName" type="text" placeholder="Artist name"></input>
                     <button type="submit">Add</button>
                 </form>
             </dialog>

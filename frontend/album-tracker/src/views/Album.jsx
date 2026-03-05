@@ -28,8 +28,10 @@ function Album() {
         const formData = new FormData(form);
         const formJson = Object.fromEntries(formData.entries());
 
+        console.log(encodeURI(formJson.trackName))
+
         let trackReq = new XMLHttpRequest();
-        trackReq.open("POST", `http://127.0.0.1:8080/tracks?trackName=${formJson.trackName}&length=${formJson.minutes * 60 + parseInt(formJson.seconds)}&albumId=${params.albumid}&albumOrder=${trackList.length}`);
+        trackReq.open("POST", `http://127.0.0.1:8080/tracks?trackName=${encodeURI(formJson.trackName)}&length=${formJson.minutes * 60 + parseInt(formJson.seconds)}&albumId=${params.albumid}&albumOrder=${trackList.length}`);
 
         trackReq.onload = () => {
             reloadData();
@@ -101,7 +103,7 @@ function Album() {
         let trackId = track.id;
 
         return (<tr key={ track.albumOrder }>
-            <td className="textLeft">{ track.name }</td>
+            <td className="textLeft trackName">{ track.name }</td>
             <td className="textRight">{ `${Math.floor(track.length / 60)}:${(track.length % 60).toString().padStart(2, "0")}` }</td>
             <td><button type="submit" className="createButton" onClick={ () => { removeTrack(trackId) } }>Remove</button></td>
         </tr>)

@@ -2,14 +2,13 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './album.css';
 
-function Album({ albumId }) {
+function Album() {
     const [ albumName, setAlbumName ] = useState("");
     const [ jacketURL, setJacketURL ] = useState("https://placehold.co/128");
     const [ trackList, setTrackList ] = useState([]);
 
-    // this sucks you can't change order
     const trackListElements = trackList.map(track =>
-        <tr>
+        <tr key={ track.albumOrder }>
             <td className="textLeft">{ track.name }</td>
             <td className="textRight">{ `${Math.floor(track.length / 60)}:${(track.length % 60).toString().padStart(2, "0")}` }</td>
         </tr>

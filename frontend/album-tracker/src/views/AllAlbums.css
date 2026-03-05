@@ -1,0 +1,22 @@
+.albumsList {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+
+    margin: 0 30px;
+}
+
+.albumListJacket {
+    width: auto;
+    height: 250px;
+
+    border-radius: 6px;
+}
+
+.albumListEntry {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}

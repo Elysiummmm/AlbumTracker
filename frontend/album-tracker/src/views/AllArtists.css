@@ -1,0 +1,51 @@
+.artistList {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.artistList thead {
+    font-weight: 600;
+}
+
+.artistList tr td {
+    padding: 15px 15px;
+    vertical-align: top;
+    text-align: center;
+
+    font-size: 22px;
+}
+
+.artistName {
+    width: 20%;
+}
+
+.works {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: left;
+
+    gap: 15px;
+}
+
+.artistList tr {
+    background: #ffffff65;
+}
+
+.artistList tr:nth-child(odd) {
+    background: transparent;
+}
+
+.artistListHead {
+    border-bottom: 1px solid black;
+}
+
+.inlineJacket {
+    width: auto;
+    height: 215px;
+
+    border-radius: 6px;
+    display: inline-block;
+}

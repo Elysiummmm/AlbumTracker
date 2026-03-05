@@ -22,7 +22,10 @@ function TopBar() {
 
             {
                 userContext.user
-                ? <Link className="topBarLink" to={ `/user/${userContext.user.id}` }>{ userContext.user.username }</Link>
+                ?   <Link className="topBarLink" to={ `/user/${userContext.user.id}` }>
+                        { userContext.user.username }
+                        <img className="profilePicture" src={ userContext.user.pfpUrl }></img>
+                    </Link>
                 : <Link className="topBarLink" to="/login">Log in</Link> 
             }
         </header>

@@ -7,6 +7,8 @@ import Register from './views/Register';
 import User from './views/User';
 import { LoginContext } from './LoginContext.js'
 import { useState, useMemo } from 'react';
+import AllAlbums from './views/AllAlbums.jsx';
+import AllArtists from './views/AllArtists.jsx';
 
 function App() {
   // thanks bestie
@@ -26,8 +28,8 @@ function App() {
           <Route path="user">
             <Route path=":userid" element={ <User /> }></Route>
           </Route>
-          <Route path="albums" element={ <></> }></Route>
-          <Route path="artists" element={ <></> }></Route>
+          <Route path="albums" element={ <AllAlbums /> }></Route>
+          <Route path="artists" element={ <AllArtists /> }></Route>
           <Route path="login" element={ <Login /> }></Route>
           <Route path="register" element={ <Register /> }></Route>
         </Routes>

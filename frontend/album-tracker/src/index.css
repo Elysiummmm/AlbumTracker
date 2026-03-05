@@ -1,17 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
 
-  color: #242424;
-  background-color: #e6e6e6;
+    color: #242424;
+    background-color: #e6e6e6;
 }
 
 .textLeft { text-align: left; }
 .textRight { text-align: right; }
 
 body {
-  margin: 0;
+    margin: 0;
+}
+
+.createButton {
+    border: none;
+    background: #b9b9b9;
+
+    color: #999;
+
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.createButton:hover {
+    background: #aaa;
 }

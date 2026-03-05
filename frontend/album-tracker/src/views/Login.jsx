@@ -27,7 +27,7 @@ function Login() {
     return (
         <>
             <form method="post" onSubmit={ handleLogin }>
-                <input name="userId" type="number" placeholder="Your user ID"></input>
+                <input required name="userId" type="number" placeholder="Your user ID"></input>
                 <button type="submit">Log in</button>
             </form>
 

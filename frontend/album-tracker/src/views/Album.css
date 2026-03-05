@@ -19,7 +19,7 @@
 .albumData {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 
     width: 512px;
 }
@@ -38,4 +38,28 @@
 
 .trackList tr:nth-child(even) {
     background: transparent;
+}
+
+.createTrackButton {
+    width: 100%;
+}
+
+.timeContainer {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.albumLeftColumn {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.albumControlsButton {
+    width: 100%;
 }

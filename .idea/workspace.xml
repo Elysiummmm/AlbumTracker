@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10306a25-68e0-40b5-a8ba-aad3b111822f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/album-tracker/src/components/TopBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/album-tracker/src/components/TopBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/album-tracker/src/components/TopBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/album-tracker/src/components/TopBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/album-tracker/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/album-tracker/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/album-tracker/src/views/AllArtists.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/album-tracker/src/views/AllArtists.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/album-tracker/src/views/Album.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/album-tracker/src/views/Album.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/album-tracker/src/views/Album.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/album-tracker/src/views/Album.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/album-tracker/src/views/AllAlbums.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/album-tracker/src/views/AllAlbums.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/elysium/albumtracker/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

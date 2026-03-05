@@ -10,7 +10,7 @@ function AllAlbums() {
             <Link to={ `/album/${album.id}` }>
                 <img src={ album.jacketURL } className="albumListJacket"></img>
             </Link>
-            <b style={{ "font-size": "22px" }}>{ album.name }</b>
+            <b style={{ fontSize: "22px" }}>{ album.name }</b>
         </div>
     );
 

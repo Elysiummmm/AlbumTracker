@@ -100,16 +100,17 @@ public class UserController {
         Optional<User> user = userRepository.findById(id);
 
         if (user.isEmpty()) {
-            return new ResponseEntity<>(NOT_FOUND);
+            return new ResponseEntity<>("No user with that ID", NOT_FOUND);
         }
 
-        Optional<Album> album = albumRepository.findById(id);
+        Optional<Album> album = albumRepository.findById(albumId);
 
         if (album.isEmpty()) {
-            return new ResponseEntity<>(NOT_FOUND);
+            return new ResponseEntity<>("No album with that ID", NOT_FOUND);
         }
 
         user.get().addListenedAlbum(album.get());
+        userRepository.save(user.get());
         return new ResponseEntity<>(OK);
     }
 
@@ -124,13 +125,14 @@ public class UserController {
             return new ResponseEntity<>(NOT_FOUND);
         }
 
-        Optional<Review> review = reviewRepository.findById(id);
+        Optional<Review> review = reviewRepository.findById(reviewId);
 
         if (review.isEmpty()) {
             return new ResponseEntity<>(NOT_FOUND);
         }
 
         user.get().addReview(review.get());
+        userRepository.save(user.get());
         return new ResponseEntity<>(OK);
     }
 

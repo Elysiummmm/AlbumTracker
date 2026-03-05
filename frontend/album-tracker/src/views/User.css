@@ -1,0 +1,62 @@
+.avatar {
+    width: auto;
+    height: 128px;
+
+    border-radius: 50%;
+}
+
+.editButton {
+    width: 100%;
+}
+
+.username {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.userPageContainer {
+    padding: 0 20%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.detailsContainer {
+    display: flex;
+    flex-direction: row;
+
+    gap: 30px;
+}
+
+.detailsRight {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.albumsContainer {
+    background: white;
+    border-radius: 6px;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    overflow-x: scroll;
+
+    gap: 15px;
+}
+
+.albumsLabel {
+    position: absolute;
+    top: 0; left: 0;
+}
+
+.noPadding {
+    text-decoration: none;
+    line-height: 0;
+}

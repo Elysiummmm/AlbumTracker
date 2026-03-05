@@ -16,8 +16,7 @@ function TopBar() {
 
     return (
         <nav>
-            <Link className="topBarLink" to="/">Home</Link>
-            <Link className="topBarLink" to="/albums">Albums</Link>
+            <Link className="topBarLink" to="/">Albums</Link>
             <Link className="topBarLink" to="/artists">Artists</Link>
 
             {
